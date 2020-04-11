@@ -1,6 +1,7 @@
-INSERT INTO cats (name) VALUES ('Meeses');
-INSERT INTO cats (name) VALUES ('Bobbi');
-INSERT INTO cats (name, sleepy) VALUES ('Sylvester', true);
-INSERT INTO cats (name, sleepy) VALUES ('Marilyn Manson', true);
-INSERT INTO cats (name, sleepy) VALUES ('Joe Biden', true);
-INSERT INTO cats (name) VALUES ('Owens');
+INSERT INTO burgers (burger_name) VALUES ('Whopper');
+INSERT INTO burgers (burger_name) VALUES ('Big Mac');
+INSERT INTO burgers (burger_name, devoured) VALUES ('Western BBQ Burger', true);
+INSERT INTO burgers (burger_name, devoured) VALUES ('Bacon Cheeseburger', true);
+
+-- Refine this to be the simplified version.
+-- We want multiple entries with 1 or 2 INSERT INTOs
