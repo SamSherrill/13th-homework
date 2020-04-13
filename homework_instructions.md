@@ -21,6 +21,7 @@ When trying to connect remotely to your Heroku database on an open network such 
 * Each burger in the waiting area also has a `Devour it!` button. When the user clicks it, the burger will move to the right side of the page.
 
 * Your app will store every burger in a database, whether devoured or not.
+*** NOTE: It appears the burger is not delete from the DB ***
 
 * [Check out this video of the app for a run-through of how it works](https://youtu.be/msvdn95x9OM).
 
@@ -48,26 +49,26 @@ Having an active and healthy commit history on GitHub is important for your futu
 
 #### App Setup
 
-1. Create a GitHub repo called `burger` and clone it to your computer.
+1. DONE - Create a GitHub repo called `burger` and clone it to your computer.
 
-2. Make a package.json file by running `npm init` from the command line.
+2. DONE - Make a package.json file by running `npm init` from the command line.
 
-3. Install the Express npm package: `npm install express`.
+3. DONE - Install the Express npm package: `npm install express`.
 
-4. Create a server.js file.
+4. DONE - Create a server.js file.
 
-5. Install the Handlebars npm package: `npm install express-handlebars`.
+5. DONE - Install the Handlebars npm package: `npm install express-handlebars`.
 
-6. Install MySQL npm package: `npm install mysql`.
+6. DONE - Install MySQL npm package: `npm install mysql`.
 
-7. Require the following npm packages inside of the server.js file:
+7. DONE - Require the following npm packages inside of the server.js file:
    * express
 
 #### DB Setup
 
-1. Inside your `burger` directory, create a folder named `db`.
+1. DONE - Inside your `burger` directory, create a folder named `db`.
 
-2. In the `db` folder, create a file named `schema.sql`. Write SQL queries this file that do the following:
+2. DONE - In the `db` folder, create a file named `schema.sql`. Write SQL queries this file that do the following:
 
    * Create the `burgers_db`.
    * Switch to or use the `burgers_db`.
@@ -76,11 +77,11 @@ Having an active and healthy commit history on GitHub is important for your futu
      * **burger_name**: a string.
      * **devoured**: a boolean.
 
-3. Still in the `db` folder, create a `seeds.sql` file. In this file, write insert queries to populate the `burgers` table with at least three entries.
+3. DONE - Still in the `db` folder, create a `seeds.sql` file. In this file, write insert queries to populate the `burgers` table with at least three entries.
 
-4. Run the `schema.sql` and `seeds.sql` files into the mysql server from the command line
+4. DONE - Run the `schema.sql` and `seeds.sql` files into the mysql server from the command line
 
-5. Now you're going to run these SQL files.
+5. DONE I think - Now you're going to run these SQL files.
 
    * Make sure you're in the `db` folder of your app.
 
@@ -94,29 +95,31 @@ Having an active and healthy commit history on GitHub is important for your futu
 
 #### Config Setup
 
-1. Inside your `burger` directory, create a folder named `config`.
+1. DONE - Inside your `burger` directory, create a folder named `config`.
 
-2. Create a `connection.js` file inside `config` directory.
+2. DONE - Create a `connection.js` file inside `config` directory.
 
-   * Inside the `connection.js` file, setup the code to connect Node to MySQL.
+   * DONE - Inside the `connection.js` file, setup the code to connect Node to MySQL.
 
-   * Export the connection.
+   * DONE - Export the connection.
 
 3. Create an `orm.js` file inside `config` directory.
 
-   * Import (require) `connection.js` into `orm.js`
+   * DONE - Import (require) `connection.js` into `orm.js`
 
    * In the `orm.js` file, create the methods that will execute the necessary MySQL commands in the controllers. These are the methods you will need to use in order to retrieve and store data in your database.
 
-     * `selectAll()`
-     * `insertOne()`
-     * `updateOne()`
+     * DONE - `selectAll()` Named .all()
+     * DONE - `insertOne()` Named .create()
+     * DONE - `updateOne()` Named .update()
 
    * Export the ORM object in `module.exports`.
 
+*** NOTE FROM HEROKU SETUP GUIDE: After	adding	the	code	above	and	pushing	those	changes	to	your	GitHub repository’s	master branch,	deploy	your	app	to	Heroku:	git push heroku master *** 
+
 #### Model setup
 
-* Inside your `burger` directory, create a folder named `models`.
+* DONE I think - Inside your `burger` directory, create a folder named `models`.
 
   * In `models`, make a `burger.js` file.
 
@@ -128,32 +131,32 @@ Having an active and healthy commit history on GitHub is important for your futu
 
 #### Controller setup
 
-1. Inside your `burger` directory, create a folder named `controllers`.
+1. DONE - Inside your `burger` directory, create a folder named `controllers`.
 
-2. In `controllers`, create the `burgers_controller.js` file.
+2. DONE - In `controllers`, create the `burgers_controller.js` file.
 
-3. Inside the `burgers_controller.js` file, import the following:
+3. DONE - Inside the `burgers_controller.js` file, import the following:
 
-   * Express
-   * `burger.js`
+   * DONE - Express
+   * DONE - `burger.js`
 
-4. Create the `router` for the app, and export the `router` at the end of your file.
+4. DONE - Create the `router` for the app, and export the `router` at the end of your file.
 
 #### View setup
 
-1. Inside your `burger` directory, create a folder named `views`.
+1. DONE - Inside your `burger` directory, create a folder named `views`.
 
-   * Create the `index.handlebars` file inside `views` directory.
+   * DONE - Create the `index.handlebars` file inside `views` directory.
 
-   * Create the `layouts` directory inside `views` directory.
+   * DONE - Create the `layouts` directory inside `views` directory.
 
-     * Create the `main.handlebars` file inside `layouts` directory.
+     * DONE - Create the `main.handlebars` file inside `layouts` directory.
 
-     * Setup the `main.handlebars` file so it's able to be used by Handlebars.
+     * DONE - Setup the `main.handlebars` file so it's able to be used by Handlebars.
 
-     * Setup the `index.handlebars` to have the template that Handlebars can render onto.
+     * DONE - Setup the `index.handlebars` to have the template that Handlebars can render onto.
 
-     * Create a button in `index.handlebars` that will submit the user input into the database.
+     * ***TO DO ***Create a button in `index.handlebars` that will submit the user input into the database.
 
 #### Directory structure
 
