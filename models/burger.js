@@ -6,6 +6,7 @@ var burger = {
       cb(res);
     });
   },
+  // Method to create a new burger, and mark it as not devoured
   create: function (name, cb) {
     orm.create("burgers", [
       "burger_name", "devoured"
@@ -13,6 +14,7 @@ var burger = {
       name, false
     ], cb);
   },
+  // Method to mark the burger as devoured
   update: function (id, cb) {
     var condition = "id=" + id;
     orm.update("burgers", {
