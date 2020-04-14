@@ -3,8 +3,6 @@
 
 This is a simple application that allows a user to write down the names of burgers they would like to eat, then to "devour" that burger.
 
-
-
 ## Features
 
 - Clean & simple user interface
@@ -24,13 +22,11 @@ GitHub repository: [https://github.com/SamSherrill/13th-homework](https://github
 
 ## Screenshots
 
-*** FIX THE LNKS BELOW ***
-![Example of basic webpage functionality](./assets/images/readme-screenshots/basic-website.png)
+Example of app at start up with seed data loaded: ![app at start up](./public/assets/images/readme-screenshots/app-start.jpg)
 
-![Example of saving functionality](./assets/images/readme-screenshots/saving-functionality.png)
+Example of app with new user entered data and some burgers eaten: ![app at start up](./public/assets/images/readme-screenshots/app-in-use.jpg)
 
-![Example of fully functional javascript](./assets/images/readme-screenshots/javascript-example.png)
-
+Example of code from index.handlebars: ![code example](./public/assets/images/readme-screenshots/code-example.jpg)
 
 ## Credits
 
