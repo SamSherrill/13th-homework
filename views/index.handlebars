@@ -1,38 +1,55 @@
-<h1>Burgers!</h1>
+{{!-- main container --}}
+<div class="container-fluid" style="width: 90%;">
+  <div class="row">
+    <div class="col-md-12 text-center" id="top-bar">
+      <img src="/assets/images/main-burger-icon.png" alt="burger" style="max-height:  200px; max-width
+      :200px;" />
+      <h1> Eat-Da-Burger! </h1>
+    </div>
 
-<h2>Burgers that are not devoured!</h2>
+    <div class="col-md-6 text-center" class="task" style="max-height: 300px; overflow: scroll">
+      <table class="table-bordered table-responsive table-lg table-condense" style="display:table;">
+        <tbody>
+          {{#each burger_data}}
+          {{#unless this.devoured}}
+          <tr>
+            <td>{{this.id}}</td>
+            <td>{{this.burger_name}}</td>
+            <td>
+              <form class="devour-form button-size">
+                <input input type="hidden" class="burger_id" type="text" value={{this.id}}><br>
+                <button type="submit"> Devour it!</button>
+              </form>
+            </td>
+          </tr>
+          {{/unless}}
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
 
-<ul>
-  {{#each burgers}}
-    {{#unless devoured}}
-      {{> burgers/burger-block devoured=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
+    <div class="col-md-6 text-center" class="task" style="max-height: 300px; overflow: scroll">
+      <table class="table-bordered table-responsive table-lg" style="display:table;">
+        <tbody>
+          {{#each burger_data}}
+          {{#if this.devoured}}
+          <tr>
+            <td><strike>{{this.id}}</strike></td>
+            <td><strike>{{this.burger_name}}</strike></td>
+          </tr>
+          {{/if}}
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
 
-<h2>Burgers that are devoured!</h2>
-
-<ul>
-  {{#each burgers}}
-    {{#if devoured}}
-      {{> burgers/burger-block devoured=false}}
-    {{/if}}
-  {{/each}}
-</ul>
-
-<h2>Add a Burger</h2>
-<form class="create-form">
-
-  <div class="form-group">
-    <label for="ca">Burger Name:</label>
-    <input type="text" id="ca" name="name">
+    <div class="col-md-4 offset-4 text-center enter_section" style="margin-top: 10%">
+      <form action="/burgers/create" method="POST">
+        <input type="text" class="form-control" name="burger_name" value="" id="enter_text" required>
+        <button type="submit" class="btn btn-primary" id="text-enter-button"
+          style="margin-top: 5px; width: 100%">Submit</button>
+      </form>
+      <p>Enter a burger you want to eat Click the "Submit" button.</p>
+    </div>
   </div>
-
-  <div class="form-group">
-    <label for="devoured">Devoured?</label><br>
-    <input type="radio" name="devoured" value="1" checked> Devoured!<br>
-    <input type="radio" name="devoured" value="0"> Not devoured!
-  </div>
-
-  <button type="submit">Add Burger</button>
-</form>
+</div>
