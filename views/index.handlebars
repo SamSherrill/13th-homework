@@ -7,6 +7,7 @@
       <h1> Eat-Da-Burger! </h1>
     </div>
 
+    {{!-- undevoured burgers go in this column, with a button that allows them to be devoured --}}
     <div class="col-md-6 text-center" class="task" style="max-height: 300px; overflow: scroll">
       <table class="table-bordered table-responsive table-lg table-condense" style="display:table;">
         <tbody>
@@ -28,6 +29,7 @@
       </table>
     </div>
 
+    {{!-- devoured burgers go in this column --}}
     <div class="col-md-6 text-center" class="task" style="max-height: 300px; overflow: scroll">
       <table class="table-bordered table-responsive table-lg" style="display:table;">
         <tbody>
@@ -43,13 +45,14 @@
       </table>
     </div>
 
+    {{!-- entry field for new burgers is here --}}
     <div class="col-md-4 offset-4 text-center enter_section" style="margin-top: 10%">
       <form action="/burgers/create" method="POST">
         <input type="text" class="form-control" name="burger_name" value="" id="enter_text" required>
         <button type="submit" class="btn btn-primary" id="text-enter-button"
           style="margin-top: 5px; width: 100%">Submit</button>
       </form>
-      <p>Enter a burger you want to eat Click the "Submit" button.</p>
+      <p>Enter a burger you want to eat, then click the "Submit" button.</p>
     </div>
   </div>
 </div>
