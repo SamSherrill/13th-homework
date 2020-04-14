@@ -31,6 +31,7 @@ Working application deployed on Heroku: [https://evening-dawn-42448.herokuapp.co
 
 
 ## Credits
+
 - The directions from the homework had a straightforward walkthrough of how to create the initial MVC file structure, as well as suggestions of what focus of each file should be.
 - The CatsApp in-class activity had a heavy influence on the code base. However, some major adjustments were made, especially to what is displayed to the user.
 - My tutor, Kunbile Abdi, [kunbile09@gmail.com](kunbile09@gmail.com). He helped me begin the UI overhaul, and helped with some troubleshooting.
